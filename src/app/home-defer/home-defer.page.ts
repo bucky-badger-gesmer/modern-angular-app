@@ -22,9 +22,9 @@ import { catchError, finalize } from 'rxjs';
 import { MovieService } from '../services/movie.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-home-defer',
+  templateUrl: './home-defer.page.html',
+  styleUrls: ['./home-defer.page.scss'],
   standalone: true,
   imports: [
     IonHeader,
@@ -45,7 +45,7 @@ import { MovieService } from '../services/movie.service';
     RouterModule,
   ],
 })
-export class HomePage implements OnInit {
+export class HomeDeferPage implements OnInit {
   private movieService = inject(MovieService);
 
   private currentPage = 1;
